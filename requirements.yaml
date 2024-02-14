@@ -1,0 +1,31 @@
+name: Web_Scraper
+channels:
+  - defaults
+dependencies:
+  - beautifulsoup4=4.12.2=py312hca03da5_0
+  - brotli-python=1.0.9=py312h313beb8_7
+  - bzip2=1.0.8=h620ffc9_4
+  - ca-certificates=2023.12.12=hca03da5_0
+  - certifi=2024.2.2=py312hca03da5_0
+  - charset-normalizer=2.0.4=pyhd3eb1b0_0
+  - expat=2.5.0=h313beb8_0
+  - idna=3.4=py312hca03da5_0
+  - libcxx=14.0.6=h848a8c0_0
+  - libffi=3.4.4=hca03da5_0
+  - ncurses=6.4=h313beb8_0
+  - openssl=3.0.13=h1a28f6b_0
+  - pip=23.3.1=py312hca03da5_0
+  - pysocks=1.7.1=py312hca03da5_0
+  - python=3.12.1=h99e199e_0
+  - readline=8.2=h1a28f6b_0
+  - requests=2.31.0=py312hca03da5_1
+  - setuptools=68.2.2=py312hca03da5_0
+  - soupsieve=2.5=py312hca03da5_0
+  - sqlite=3.41.2=h80987f9_0
+  - tk=8.6.12=hb8d0fd4_0
+  - tzdata=2023d=h04d1e81_0
+  - urllib3=2.1.0=py312hca03da5_1
+  - wheel=0.41.2=py312hca03da5_0
+  - xz=5.4.5=h80987f9_0
+  - zlib=1.2.13=h5a0b063_0
+prefix: /Users/jimmytran/miniconda3/envs/Web_Scraper
