@@ -1,6 +1,7 @@
-# Web Scraper for URLs in Text File
+# Web Scraper for SIUE's The Alestle URLs in Text File 
+**IMPORTANT: Only works for https://www.alestlelive.com**
 
-This Python program is designed to visit each URL listed in a text file and scrape or download the content from those URLs. It serves as a versatile tool for extracting information from various web resources efficiently.
+This Python program is designed to visit each URL for The Alestle's web pages listed in a text file and scrape or download the content from those URLs. It serves as a versatile tool for extracting information from various web resources efficiently.
 
 ## Features
 
