@@ -1,5 +1,7 @@
 """
-FileReader class processes input files
+FileReader class processes input files from its file
+name and produces html pages from the urls in the input
+file.
 """
 
 import requests

@@ -1,3 +1,9 @@
+"""
+HtmlProcessor class process each of its html
+pages and output filtered articles into a desfinated
+directory
+"""
+
 from bs4 import BeautifulSoup
 
 class HtmlProcessor:
