@@ -24,7 +24,8 @@ class HtmlProcessor:
             for div in divs:
                 ps = div.find_all("p")
                 for p in ps:
-                    string += p.string + "\n"
+                    if p.string is not None:
+                        string += p.string + "\n"
             
             with open(self.output_dir + "/url" + str(count) + ".txt","w") as out_file:
                 out_file.write(string) #Save the filtered response in text files in designated directory
@@ -35,5 +36,4 @@ class HtmlProcessor:
         for count, page in enumerate(self.pages, start=1):
             name = self.output_dir + "/url" + str(count) + ".txt"
             file_names.append(name)
-            URLnum += 1
         return file_names
