@@ -13,7 +13,7 @@ class FileReader:
             with open(self.input_file_name) as file:
                 urls = [line.rstrip() for line in file]
             for url in urls:
-                self.pages.append(requests.get(url))
+                self.pages.append(requests.get(url)) #get html pages from url
         except:
             print("Error reading file")
         
