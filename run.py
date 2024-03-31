@@ -21,6 +21,7 @@ import requests
 from bs4 import BeautifulSoup
 from module_1.page_reader import FileReader
 from module_2.article_processor import HtmlProcessor
+from module_3.open_ai_api import AI
 
 
 def main():
@@ -28,6 +29,8 @@ def main():
     pages = htmls.get_pages()
     html_processor = HtmlProcessor( pages, "Data/processed")
     html_processor.process()
+    ai = AI(html_processor.get_output_filenames(), "Data/generated")
+    ai.generate()
 
 
 if __name__ == "__main__":

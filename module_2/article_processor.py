@@ -29,3 +29,12 @@ class HtmlProcessor:
             with open(self.output_dir + "/url" + str(URLnum) + ".txt","w") as out_file:
                 out_file.write(string)
             URLnum += 1
+
+    def get_output_filenames(self):
+        file_names = []
+        URLnum = 1
+        for page in self.pages:
+            name = self.output_dir + "/url" + str(URLnum) + ".txt"
+            file_names.append(name)
+            URLnum += 1
+        return file_names
