@@ -19,6 +19,81 @@ This Python program is designed to visit each URL for The Alestle's web pages li
 4. **Run the Program**: Execute the main Python script `main.py`.
 5. **Output**: The program will process each URL, extract the content, and save it to an external `.txt` file.
 
+## OpenAI API Demo
+
+This repository contains a simple demonstration of how to use the OpenAI API to interact with powerful GPT models.
+
+### Creating an OpenAI API Account and Generating API Key
+
+To access OpenAI's powerful GPT models and utilize its API, you'll need to create an account on the OpenAI platform and generate an API key. Here's a step-by-step guide:
+
+1. **Sign Up for an Account**:
+   - Go to the [OpenAI website](https://openai.com/) and sign up for an account if you haven't already. Follow the instructions to complete the registration process.
+
+2. **Navigate to API Settings**:
+   - After signing in, navigate to your account settings. You can find this by clicking on your profile icon or by directly visiting the account settings page.
+
+3. **Generate an API Key**:
+   - Once you're in the account settings, find the section related to API access or API keys. Click on the option to generate a new API key. You might be asked to provide additional information or agree to terms of service.
+
+4. **Copy the API Key**:
+   - After generating the API key, it will be displayed on the screen. Copy this key and store it securely. Treat your API key like a password, as it grants access to your OpenAI account and can incur charges based on usage.
+
+5. **Add API key to .bash_profile**:
+    - Open Terminal: You can find it in the Applications folder or search for it using Spotlight (Command + Space).
+    - Edit Bash Profile: Use the command nano ~/.bash_profile or nano ~/.zshrc (for newer MacOS versions) to open the profile file in a text editor.
+    - Add Environment Variable: In the editor, add the line below, replacing your-api-key-here with your actual API key:
+    ```bash
+    export OPENAI_API_KEY='your-api-key-here'
+    ```
+    - Save and Exit: Press Ctrl+O to write the changes, followed by Ctrl+X to close the editor.
+    - Load Your Profile: Use the command source ~/.bash_profile or source ~/.zshrc to load the updated profile.
+    - Verification: Verify the setup by typing echo $OPENAI_API_KEY in the terminal. It should display your API key. 
+
+### Making a Simple API Call in macOS using Python
+
+Here's how you can use the generated API key to make a simple API call in macOS using Python:
+
+1. **Install the OpenAI Python Library:**
+   - Before making API calls, ensure you have the OpenAI Python library installed. You can install it via conda:
+
+   ```bash
+   conda install openai
+   ```
+2. **Write Python Script:**
+   - Before making API calls, ensure you have the OpenAI Python library installed. You can install it via conda:
+
+   ```python
+   import openai
+   ```
+3. **Make API Call:**
+   - Use the library functions to make API calls. For example, to use the completion endpoint of the API:
+
+   ```python
+   client = OpenAI()
+   completion = client.chat.completions.create(
+                    model="gpt-3.5-turbo",
+                    messages=[
+                    {"role": "assistant", "content":  "~Article content~"},
+                    {"role": "user", "content": "Please make the article concise, up to 50 words"}
+                    ]
+                    )
+   ```
+4. **Print or Use Response:**
+   - Once you receive the response, you can print it or utilize it as required. For example:
+
+   ```python
+   print(completion.choices[0].message.content)
+   ```
+
+5. **Write Python Script:**
+   - Execute the Python script in your terminal:
+
+   ```bash
+   python run.py
+   ```
+   Ensure that you are in the directory containing your Python script.
+
 ## Configuration
 
 - **URL File Path**: Specify the path to the text file containing the list of URLs.

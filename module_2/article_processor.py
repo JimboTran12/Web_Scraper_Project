@@ -12,8 +12,8 @@ class HtmlProcessor:
         self.pages = pages
 
     def process(self):    
-        URLnum = 1
-        for page in self.pages:
+
+        for count, page in enumerate(self.pages, start=1):
             string = ""
             soup = BeautifulSoup(page.text, "html.parser")
 
@@ -26,9 +26,9 @@ class HtmlProcessor:
                 for p in ps:
                     string += p.string + "\n"
             
-            with open(self.output_dir + "/url" + str(URLnum) + ".txt","w") as out_file:
+            with open(self.output_dir + "/url" + str(count) + ".txt","w") as out_file:
                 out_file.write(string)
-            URLnum += 1
+
 
     def get_output_filenames(self):
         file_names = []
