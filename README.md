@@ -9,7 +9,43 @@ This Python program is designed to visit each URL for The Alestle's web pages li
 - **Headline Extraction**:  It visits each URL and extracts the headline from the web page.
 - **Content Extraction**: It visits each URL and extracts the content from the web page.
 
+# Web Scraper for SIUE's The Alestle URLs in Text File
 
+## Description
+
+This Python program is designed to visit each URL for The Alestle's web pages listed in a text file and scrape or download the content from those URLs. It serves as a versatile tool for extracting information from various web resources efficiently.
+
+## Features
+
+- **URL Extraction**: The program parses a text file containing a list of URLs and extracts each URL for further processing.
+- **Headline Extraction**:  It visits each URL and extracts the headline from the web page.
+- **Content Extraction**: It visits each URL and extracts the content from the web page.
+
+## Running Tests
+
+To run the tests for this project, you will need to use pytest. If you haven't installed pytest yet, you can do so by running the following command:
+
+```bash
+conda install pytest
+```
+Once pytest is installed, navigate to the project directory and run the following command:
+```bash
+conda pytest test.py
+```
+
+### What is being tested?
+The tests in this project cover the following functionalities:
+
+1. **URL Extraction**: Tests if the FileReader class correctly parses a text file containing a list of URLs and extracts each URL for further processing.
+2. **HTML Page Retrieval:** Tests if the FileReader class correctly retrieves the HTML pages from the URLs.
+3. **Content Extraction:**  Tests if the HtmlProcessor class correctly processes the HTML pages and extracts the content from the web pages.
+4. **Output File Creation**: Tests if the HtmlProcessor class correctly creates output files with the extracted content.
+5. **HtmlProcessor get_output_filenames method**: Tests if the HtmlProcessor class correctly returns the filenames of the output files.
+6. **FileReader Initialization**: Tests if the FileReader class is correctly initialized with the given input file name.
+7. **HtmlProcessor Initialization**: Tests if the HtmlProcessor class is correctly initialized with the given pages and output directory.
+8. **AI Initialization:Tests if the AI class is correctly initialized with the given files and output directory.
+
+   Each of these tests is designed to ensure that the individual components of the project are working as expected, and that they correctly interact with each other to produce the expected output.
 
 ## Usage
 
