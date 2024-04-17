@@ -15,7 +15,7 @@ class AI:
     def generate(self):
         client = OpenAI()
         for count, file in enumerate(self.files, start=1):
-            with open(file, "r") as out_file:
+            with open(file, "r", encoding='utf-8') as out_file:
                 header = out_file.readline()  # Save the headline and leave the body to use as the prompt
                 prompt = "The article is " + out_file.read()
                 completion = client.chat.completions.create( #API call
