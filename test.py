@@ -34,3 +34,29 @@ def  test_html_processor_get_headline(): #Test if the headline is extracted from
     with open('Data/processed/url1.txt', 'r') as f:
         content = f.readline()
     assert content == 'COST-FRIENDLY COLLEGE DATES FOR VALENTINE’S DAY\n'
+
+def test_output_file_creation():#Test if the output files are created
+    reader = FileReader('Data/raw/input.txt')
+    pages = reader.get_pages()
+    processor = HtmlProcessor(pages, 'Data/processed')
+    processor.process()
+    output_filenames = processor.get_output_filenames()
+    assert output_filenames == ['Data/processed/url1.txt', 'Data/processed/url2.txt', 'Data/processed/url3.txt', 'Data/processed/url4.txt', 'Data/processed/url5.txt', 'Data/processed/url6.txt', 'Data/processed/url7.txt', 'Data/processed/url8.txt', 'Data/processed/url9.txt', 'Data/processed/url10.txt']
+
+def test_file_reader_init(): #Test if the file reader is initialized
+    reader = FileReader('Data/raw/input.txt')
+    assert reader.input_file_name == 'Data/raw/input.txt'
+
+def test_html_processor_init(): #Test if the html processor is initialized
+    reader = FileReader('Data/raw/input.txt')
+    pages = reader.get_pages()
+    processor = HtmlProcessor(pages, "Data/processed")
+    assert processor.output_dir == "Data/processed"
+
+def test_ai_init(): #Test if the AI is initialized
+    reader = FileReader('Data/raw/input.txt')
+    pages = reader.get_pages()
+    processor = HtmlProcessor(pages, "Data/processed")
+    ai = AI(processor.get_output_filenames(), "Data/generated")
+
+    assert ai.output_dir == "Data/generated" #Test if the output directory is set correctly
