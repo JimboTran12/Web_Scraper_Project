@@ -27,7 +27,7 @@ class HtmlProcessor:
                     if p.string is not None:
                         string += p.string + "\n"
             
-            with open(self.output_dir + "/url" + str(count) + ".txt","w") as out_file:
+            with open(self.output_dir + "/url" + str(count) + ".txt","w", encoding='utf-8') as out_file:
                 out_file.write(string) #Save the filtered response in text files in designated directory
 
 
