@@ -30,7 +30,7 @@ conda install pytest
 ```
 Once pytest is installed, navigate to the project directory and run the following command:
 ```bash
-conda pytest test.py
+pytest test.py
 ```
 
 ### What is being tested?
